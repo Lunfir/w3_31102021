@@ -41,7 +41,5 @@ int main()
         printf("currentState\n");
     }
 
-
-
     return 0;
 }
