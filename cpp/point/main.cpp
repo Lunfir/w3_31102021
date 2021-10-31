@@ -6,31 +6,21 @@
 
 int main()
 {
-    Point pointA, pointB, pointRes;
+    // default constructor / constructor without arguments
+    // Point pointA;
+    // pointA.setX(42);
+    // pointA.setY(42);
 
-    pointA.setX(12);
-    pointA.setY(12);
+    // assignment operator
+    // Point pointA = Point(12, 2); // Point pointA(12, 2);
+    // Point pointB = Point(4, 4);  // Point pointB(4, 4);
+    // pointB = pointA;             // pointB.operator=(pointA);
 
-    pointB.setX(3);
-    pointB.setY(3);
+    // copy constructor
+    Point pointA = Point(12, 2);    // Point pointA(12, 2);
+    Point pointB = pointA;          // Point pointB(pointA);
 
-    if (pointA == pointB)
-    {
-        std::cout << "Equal" << std::endl;
-    }
-
-    if (pointA != pointB)
-    {
-        std::cout << "Non equal" << std::endl;
-    }
-
-    pointRes = pointA + pointB;
-    // pointRes = pointA.operator+(pointB);
-
-    std::cout << pointRes << std::endl;
-
-    pointRes(2, 5);
-    std::cout << pointRes << std::endl;
+    std::cout << pointA << std::endl;
 
     return 0;
 }
