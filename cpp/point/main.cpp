@@ -6,21 +6,31 @@
 
 int main()
 {
-    Point pointA, pointB;
+    Point pointA, pointB, pointRes;
 
-    pointA.setX(1.23);
-    pointA.setY(2.12);
+    pointA.setX(12);
+    pointA.setY(12);
 
-    pointA.pointPrint();
-    pointB.pointPrint();
+    pointB.setX(3);
+    pointB.setY(3);
 
-    std::cout   << "is equal: " 
-                << pointA.pointEqual(pointB) << std::endl;
+    if (pointA == pointB)
+    {
+        std::cout << "Equal" << std::endl;
+    }
 
-    pointB.increment(23);
+    if (pointA != pointB)
+    {
+        std::cout << "Non equal" << std::endl;
+    }
 
-    pointB.setX(43);
-    pointB.pointPrint();
+    pointRes = pointA + pointB;
+    // pointRes = pointA.operator+(pointB);
+
+    std::cout << pointRes << std::endl;
+
+    pointRes(2, 5);
+    std::cout << pointRes << std::endl;
 
     return 0;
 }

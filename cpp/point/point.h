@@ -1,13 +1,15 @@
 // point.h
+#pragma once
+
 #include <iostream>
 #include <cmath>
 
-struct Point
+class Point
 {
+    friend std::ostream& operator<<(std::ostream& out, const Point& inPoint);
 public:
     void increment(double inNum);
 
-    void pointPrint() const;
     int pointEqual(const Point& in) const;
     double pointDistance(const Point& in) const;
 
@@ -17,7 +19,24 @@ public:
     void setY(double inY);
     double getY() const;
 
+    Point& operator=(const Point& other);
+    Point operator+(const Point& other) const;
+
+    bool operator==(const Point& other) const;
+    bool operator!=(const Point& other) const;
+
+    Point& operator()(double inX, double inY);
+
 private:
     double x;
     double y;
 };
+
+std::ostream& operator<<(std::ostream& out, const Point& inPoint);
+
+// inline std::ostream& operator<<(std::ostream& out, const Point& inPoint)
+// {
+//    out << "(" << inPoint.getX() << ", " << inPoint.getY() << ")";
+
+//    return out;
+// }
