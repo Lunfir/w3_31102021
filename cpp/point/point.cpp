@@ -21,3 +21,25 @@ void Point::increment(double inNum)
     this->x += inNum;
     this->y += inNum;
 }
+
+void Point::setX(double inX)
+{
+    if (inX >= 0)
+    {
+        this->x = inX;
+    }
+}
+void Point::setY(double inY)
+{
+    this->y = inY;
+}
+
+double Point::getX() const
+{
+    return this->x;
+}
+
+double Point::getY() const
+{
+    return this->y;
+}

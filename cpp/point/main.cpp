@@ -1,3 +1,5 @@
+// g++ -c point.cpp -o point.o && g++ point.o main.cpp && ./a.exe
+
 #include <iostream>
 
 #include "point.h"
@@ -6,8 +8,8 @@ int main()
 {
     Point pointA, pointB;
 
-    pointA.x = 1.23;
-    pointA.y = 2.12;
+    pointA.setX(1.23);
+    pointA.setY(2.12);
 
     pointA.pointPrint();
     pointB.pointPrint();
@@ -16,6 +18,8 @@ int main()
                 << pointA.pointEqual(pointB) << std::endl;
 
     pointB.increment(23);
+
+    pointB.setX(43);
     pointB.pointPrint();
 
     return 0;
