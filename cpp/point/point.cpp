@@ -4,11 +4,11 @@
 Point::Point()
 {
     std::cout << __PRETTY_FUNCTION__ << std::endl;
-    this->x = 0;
-    this->y = 0;
+    this->x = 0.0;
+    this->y = 0.0;
 }
 
-Point::Point(int inX, int inY)
+Point::Point(double inX, double inY)
 {
     std::cout << __PRETTY_FUNCTION__ << std::endl;
     this->x = inX;
@@ -22,40 +22,40 @@ Point::Point(const Point& other)
     this->y = other.y;
 }
 
-int Point::pointEqual(const Point& in) const
+double Point::pointEqual(const Point& in) const
 {
     return this->x == in.x && this->y == in.y;
 }
 
-int Point::pointDistance(const Point& in) const
+double Point::pointDistance(const Point& in) const
 {
     return hypot(this->x-in.x, this->y-in.y);
 }
 
-void Point::increment(int inNum)
+void Point::increment(double inNum)
 {
     this->x += inNum;
     this->y += inNum;
 }
 
-void Point::setX(int inX)
+void Point::setX(double inX)
 {
     if (inX >= 0)
     {
         this->x = inX;
     }
 }
-void Point::setY(int inY)
+void Point::setY(double inY)
 {
     this->y = inY;
 }
 
-int Point::getX() const
+double Point::getX() const
 {
     return this->x;
 }
 
-int Point::getY() const
+double Point::getY() const
 {
     return this->y;
 }
@@ -90,7 +90,7 @@ bool Point::operator!=(const Point& other) const
     // return !this->operator==(other);
 }
 
-Point& Point::operator()(int inX, int inY)
+Point& Point::operator()(double inX, double inY)
 {
     this->x += inX;
     this->y += inY;

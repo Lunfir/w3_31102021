@@ -10,19 +10,19 @@ class Point
 
 public:
     Point();
-    Point(int inX, int inY);
+    Point(double inX, double inY);
     Point(const Point& other);
 
-    void increment(int inNum);
+    void increment(double inNum);
 
-    int pointEqual(const Point& in) const;
-    int pointDistance(const Point& in) const;
+    double pointEqual(const Point& in) const;
+    double pointDistance(const Point& in) const;
 
-    void setX(int inX);
-    int getX() const;
+    void setX(double inX);
+    double getX() const;
 
-    void setY(int inY);
-    int getY() const;
+    void setY(double inY);
+    double getY() const;
 
     Point& operator=(const Point& other);
     Point operator+(const Point& other) const;
@@ -30,11 +30,11 @@ public:
     bool operator==(const Point& other) const;
     bool operator!=(const Point& other) const;
 
-    Point& operator()(int inX, int inY);
+    Point& operator()(double inX, double inY);
 
 private:
-    int x;
-    int y;
+    double x;
+    double y;
 };
 
 std::ostream& operator<<(std::ostream& out, const Point& inPoint);
